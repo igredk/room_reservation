@@ -19,11 +19,7 @@ $ poetry shell
 ```
 $ poetry install
 ```
-4. Примените миграции:
-```
-$ alembic upgrade head
-```
-5. Создайте в корневой директории файл .env со следующим наполнением:
+4. Создайте в корневой директории файл .env со следующим наполнением:
 ```
 APP_TITLE=Сервис бронирования переговорных комнат
 APP_DESCRIPTION=Приложение предоставляет возможность бронировать помещения на определённый период времени.
@@ -33,6 +29,10 @@ FIRST_SUPERUSER_EMAIL=jon@example.com
 FIRST_SUPERUSER_PASSWORD=jonhopkins
 FIRST_SUPERUSER_NAME=Jon
 FIRST_SUPERUSER_LAST_NAME=Hopkins
+```
+5. Примените миграции для создания базы данных:
+```
+$ alembic upgrade head
 ```
 6. Для запуска проекта выполните команду:
 ```
